@@ -1,0 +1,126 @@
+/*
+Author:  Brittany Ladd
+Date:    July-August 2023
+Purpose: This file has the styles for the web page.
+
+Copyright (c) 2023 - 2023
+*/
+
+body {
+    background: #c9c9c9;
+}
+
+#main-div {
+    text-align: center;
+}
+
+#main-title {
+    font-size: calc(1.6rem + 1.5vw);
+}
+
+#sub-subheading {
+    font-size: calc(0.7rem + 0.8vw);
+    color: #033091;
+}
+
+hr {
+    border: 2px solid #3d87ff;
+    margin-top: 0;
+}
+
+#decision-box {
+    background: #619eff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#top-heading-box {
+    background: #9dc1fc;
+}
+
+#add-item-input-group {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#create-choices-box {
+    background: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.paragraph-text {
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: calc(0.7rem + 0.8vw);
+}
+
+.pad-top-15 {
+   padding-top: 15px;
+}
+
+.pad-bottom-15 {
+   padding-bottom: 15px;
+}
+
+.pad-left-30 {
+   padding-left: 30px;
+}
+
+.pad-right-30 {
+   padding-right: 30px;
+}
+
+#copyright-msg {
+    color: gray;
+    font-size: calc(0.7rem + 0.5vw)
+}
+
+
+/*
+#demo-video {
+    margin-bottom: 25px;
+    margin-top: 8px;
+}
+
+#instructions-column {
+    text-align: left;
+}
+
+#site-img {
+    width: 95%;
+    border: 1px solid gray;
+    margin-top: 15px;
+}
+
+#pic-col {
+    height: 100%;
+}
+
+figcaption {
+    color: gray;
+    font-size: calc(0.5rem + 0.9vw)
+}
+
+figure {
+    padding-left: 5%;
+}
+
+#features-accordion {
+    padding-bottom: 15px;
+}
+
+.accordion-button {
+    font-size: calc(0.8rem + 0.8vw);
+}
+
+.accordion-body {
+    font-size: calc(0.7rem + 0.7vw);
+}
+
+iframe {
+    width: 90%;
+    height: calc(50vw)
+}
+
+*/

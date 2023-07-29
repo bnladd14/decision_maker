@@ -1,0 +1,78 @@
+<!--
+Author: Brittany Ladd
+Date: July - August 2023
+Purpose: This file has the HTML for the entire web page.
+
+Copyright (c) 2023 - 2023
+-->
+<!DOCTYPE html>
+<head>
+    <title>Random Decision Maker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel='shortcut icon' type='image/x-icon' href='./static/favicon.ico' />
+    <link rel="stylesheet" href="./static/styles/index.css">
+    <script type="text/javascript">
+        let items = [];
+
+        function addItem() {
+            let item = document.getElementById('item-to-add').value;
+            if (null != item && '' != item.trim()) {
+                items.push(item.trim());
+                document.getElementById('current-choices').innerHTML = '<p class="paragraph-text pad-bottom-15" id="current-choices">Current Choices: ' + items.join(', ') + '</p>';
+            }
+            document.getElementById('item-to-add').value = '';
+        }
+
+        function selectRandomItem() {
+            let selected = '';
+            if (0 == items.length) {
+                selected = 'There are no choices to decide from!'
+            } else {
+                selected = items[Math.floor(Math.random() * items.length)]
+            }
+            document.getElementById('selected-item').innerText = selected;
+        }
+
+        function clearItems() {
+            items = [];
+            document.getElementById('selected-item').innerText = '';
+            document.getElementById('current-choices').innerHTML = '';
+        }
+    </script>
+</head>
+<body style="background-color: #bfbfbf">
+    <div id="main-div">
+        <!-- Top heading with title -->
+        <div class="jumbotron" id="top-heading-box">
+            <h1 id="main-title" class="pad-top-15">Random Decision Maker</h1>
+            <p id="sub-subheading">Need help deciding? Let this do the work for you!</p>
+            <hr>
+        </div>
+        <!-- Decision setup form -->
+        <div class="jumbotron" id="create-choices-box">
+            <p class="paragraph-text pad-top-15">Create a custom decision or select a predefined decision</p>
+            <div id="add-item-input-group" class="input-group mb-3">
+              <input id="item-to-add" type="text" class="form-control" placeholder="Add choice to decision..." aria-label="Choice to Add" aria-describedby="button-addon2">
+              <button onclick="addItem()" class="btn btn-secondary" type="button" id="button-addon2">Add</button>
+            </div>
+            <p id="current-choices"></p>
+            <div id="make-decision-button-group" class="pad-bottom-15">
+                <button onclick="selectRandomItem()" class="btn btn-primary" type="button" id="button-addon2">Decide!</button>
+                <button onclick="clearItems()" class="btn btn-secondary" type="button" id="button-addon2">Start Over</button>
+            </div>
+        </div>
+        <!-- Display the random decision -->
+        <div class="jumbotron" id="decision-box">
+            <p id="selected-item"></p>
+        </div>
+        <!-- Copyright message -->
+        <p id="copyright-msg">© 2023 Brittany Ladd. All Rights Reserved.</p>
+    </div>
+    <script type="text/javascript">
+        document.getElementById('item-to-add').addEventListener("keydown", (event) => {
+            if (event.keyCode === 13) {
+                addItem();            }
+        });
+    </script>
+</body>
+</html>
